@@ -1,0 +1,27 @@
+    /* CSS untuk Konten */
+  h1, h2, h3, p {
+    margin: 20px;
+  }
+  
+  span {
+    font-weight: bold;
+  }
+  
+  .audio-container {
+    margin: 20px;
+  }
+ body{ 
+     
+        background: linear-gradient(rgba(185, 148, 112, 0.7), rgba(185, 148, 112, 0.7)), url('https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .paragraf-container {
+        margin-bottom: 20px; /* Jarak antara setiap container paragraf */
+        padding: 10px; /* Ruang internal di dalam container */
+        background-color: #925a35; /* Warna latar belakang */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+        text-align: center;
+
+      }
