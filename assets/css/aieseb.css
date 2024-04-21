@@ -1,9 +1,41 @@
-.container {
+.container-aieseb {
   width: 80%;
   height: 60px;
   margin: 0 auto;
 }
 
-/* .container {
+/* .container-aieseb {
   margin: 80% 0;
 } */
+
+.aieseb-header {
+  background-color: aquamarine;
+  margin: 12px 0;
+}
+
+.aieseb-content {
+  margin: 12px 0;
+}
+
+.aieseb-footer {
+  margin: 12px 0;
+  background-color: green;
+}
+
+.aieseb-footer ul {
+  list-style-type: none;
+}
+
+.aieseb-footer ul li {
+  float: left;
+  /* margin: 0 8px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aieseb-footer ul li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
