@@ -1,27 +1,142 @@
-    /* CSS untuk Konten */
-  h1, h2, h3, p {
-    margin: 20px;
-  }
-  
-  span {
-    font-weight: bold;
-  }
-  
-  .audio-container {
-    margin: 20px;
-  }
- body{ 
-     
-        background: linear-gradient(rgba(185, 148, 112, 0.7), rgba(185, 148, 112, 0.7)), url('https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png');
-        background-size: cover;
-        background-repeat: no-repeat;
+
+    
+    @media screen and (max-width: 768px) {
+      .nav-container header label {
+        display: inline-block;
+        color: #fefae0;
+        font-style: normal;
+        font-size: 2rem;
+        padding: 0.5rem;
+        padding-left: 1rem;
+      }
+    
+      .nav-container header {
+        width: 100%;
+      }
+    
+      .nav-container nav ul {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+      }
+    
+      .nav-container li a {
+        display: block;
+        color: white;
+        background-color: #5f6f52;
+        padding: 0 2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        height: auto;
+      }
+    
+      .nav-container li a:hover {
+        border-bottom: none;
+      }
+    
+      .nav-container .logo {
+        position: absolute;
+        right: 0px;
+        z-index: 1000;
+      }
+    
+      .nav-container .logo img {
+        width: 80px;
+      }
+    
+      .nav-container nav {
+        display: none;
+      }
+    
+      .nav-container header input:checked ~ nav {
+        display: flex;
+      }
     }
     
-    .paragraf-container {
-        margin-bottom: 20px; /* Jarak antara setiap container paragraf */
-        padding: 10px; /* Ruang internal di dalam container */
-        background-color: #925a35; /* Warna latar belakang */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
-        text-align: center;
+  
+    .audio-container {
+    margin: 20px;
+  }
+  body
+  {
+      background: linear-gradient(
+          rgba(185, 148, 112, 0.5),
+          rgba(185, 148, 112, 0.5)
+        ),
+        url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
+          no-repeat;
+      background-size: cover;
+    }
+      
 
-      }
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+}
+
+
+
+/* BREAKPOINT TABLET */
+@media screen and (max-width: 768px){
+  /* Kode CSS Di Sini */
+  
+
+/* HERO */
+.hero-text h1 {
+  font-size: 3em;
+}
+/* END OF HERO */
+
+
+
+
+}
+
+/* HERO */
+.hero-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), 
+                  rgba(0, 0, 0, 0.3)), url("images/bg.jpg");
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 4em;
+  color: var(--dark-color);
+}
+
+.hero-text p {
+  font-size: 2em;
+  margin: 0;
+  color: var(--dark-color);
+}
+/* END OF HERO */
+
+
+
+

@@ -113,4 +113,15 @@ function sendMessage() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+// Menangkap elemen-elemen dengan kelas "btn"
+var tombol = document.getElementsByClassName("btn");
 
+// Menambahkan event listener untuk setiap elemen
+for (var i = 0; i < tombol.length; i++) {
+  tombol[i].addEventListener("click", function() {
+    // Mengubah teks tombol saat diklik
+    this.innerHTML = "Tombol telah diklik";
+    // Mengarahkan pengguna ke halaman HTML lain
+    window.location.href = "syahadat.html";
+  });
+}
