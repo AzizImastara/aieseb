@@ -1,5 +1,4 @@
 // scroll on top
-
 document.getElementById("logo").addEventListener("click", function () {
   window.scrollTo({
     top: 0,
@@ -10,13 +9,20 @@ document.getElementById("logo").addEventListener("click", function () {
 document.addEventListener("DOMContentLoaded", initializeSlider);
 
 function initializeSlider() {
-  slides[slideIndex].classList.add("displaySlide");
-  intervalId = setInterval(nextSlide, 3000);
+    slides[slideIndex].classList.add("displaySlide");
+    intervalId = setInterval(nextSlide, 3000);
+
+    arabSlides[arabSlideIndex].classList.add("displaySlide");
+    arabIntervalId = setInterval(nextArabSlide, 5000);
 }
 
 const slides = document.querySelectorAll(".slides .slide");
 let slideIndex = 0;
 let intervalId = null;
+
+const arabSlides = document.querySelectorAll(".slidesArab .slideArab");
+let arabSlideIndex = 0;
+let arabIntervalId = null;
 
 function showSlide(index) {
   if (index >= slides.length) {
@@ -50,22 +56,37 @@ function nextSlide() {
   showSlide(slideIndex);
 }
 
-// function sendMessage() {
-//   let name = document.querySelector('input[name="name"]').value;
-//   let email = document.querySelector('input[name="email"]').value;
-//   let message = document.querySelector('textarea[name="message"]').value;
+function showArabSlide(index) {
+  if (index >= arabSlides.length) {
+      arabSlideIndex = 0;
+  } else if (index < 0) {
+      arabSlideIndex = arabSlides.length - 1;
+  }
 
-//   if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
-//     alert("Please fill in all fields.");
-//     return;
-//   }
+  arabSlides.forEach(slide => {
+      slide.classList.remove("displaySlide");
+  });
 
-//   alert("Success! Message sent.");
+  const currentArabSlide = arabSlides[arabSlideIndex];
+  currentArabSlide.classList.add("displaySlide");
+}
 
-//   document.querySelector("form").reset();
+function prevArabSlide() {
+  clearInterval(arabIntervalId);
+  arabSlideIndex--;
+  if (arabSlideIndex < 0) {
+      arabSlideIndex = arabSlides.length - 1;
+  }
+  showArabSlide(arabSlideIndex);
+}
 
-//   window.scrollTo({ top: 0, behavior: "smooth" });
-// }
+function nextArabSlide() {
+  arabSlideIndex++;
+  if (arabSlideIndex >= arabSlides.length) {
+      arabSlideIndex = 0;
+  }
+  showArabSlide(arabSlideIndex);
+}
 
 function sendMessage() {
   let name = document.querySelector('input[name="name"]').value;
@@ -91,3 +112,5 @@ function sendMessage() {
   // Scroll kembali ke atas halaman
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+
