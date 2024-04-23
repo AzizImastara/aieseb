@@ -1,5 +1,6 @@
 footer {
   background-color: #5f6f52;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container-footer {
@@ -7,6 +8,8 @@ footer {
   margin: 0 auto;
   padding-top: 12px;
   color: #fefae0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-img {
@@ -24,8 +27,8 @@ footer {
   margin: 0;
 }
 
-fieldset legend {
-  display: block;
+fieldset legend,
+.footer-company h3 {
   font-weight: bold;
   color: #fefae0;
 }
@@ -91,4 +94,52 @@ fieldset legend {
 .toast-head,
 .btn-close {
   margin: 0 12px;
+}
+
+.footer-company ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-company ul li {
+  margin: 12px 0;
+}
+
+.footer-company a {
+  text-decoration: none;
+}
+
+.copyright {
+  /* background-color: #a9b388; */
+  padding: 12px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-message,
+  .footer-company {
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .copyright {
+    text-align: center;
+  }
 }
