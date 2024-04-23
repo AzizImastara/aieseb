@@ -36,9 +36,9 @@
     <div class="index">
       <div class="slider">
         <div class="slides">
-            <img class="slide" src="assets/image/home/668124.png" alt="Image #1">
-            <img class="slide" src="assets/image/home/769160.jpg" alt="Image #2">
-            <img class="slide" src="assets/image/home/CHAD SAILOR MOON.png" alt="Image #3">
+            <img class="slide" src="assets/image/home/reading_quran.jpg" alt="Image #1">
+            <img class="slide" src="assets/image/home/quran.jpg" alt="Image #2">
+            <img class="slide" src="assets/image/home/ka'bah.jpg" alt="Image #3">
         </div>
         <button class="prev" onclick="prevSlide()">&#10094</button>
         <button class="next" onclick="nextSlide()">&#10095</button>
@@ -79,13 +79,13 @@
       <div class="showcase-container">
         <section class="showcase">
             <div class="showcase-image">
-                <img src="https://via.placeholder.com/486x222" alt="">
+                <img src="assets/image/home/learning.jpg" alt="">
             </div>
             <div class="showcase-text">
                 <h2>Mari Belajar Bersama</h2>
                 <p>Mari bersama-sama belajar menjadi mualaf dengan memahami inti ajaran Islam: Syahadat, Shalat, Zakat, Puasa, dan Haji. Di setiap langkah, kita temukan keindahan dan kedalaman iman yang membimbing kita pada jalan kebenaran. Bergabunglah dengan kami dalam perjalanan ini, menuju kesadaran, keberkahan, dan kebahagiaan yang tiada tara.</p>
                 <a href="belajar.html">
-                  <button class="showcase-button">Click Me!</button>
+                  <button class="showcase-button">Pelajari</button>
                 </a>
             </div>
         </section>
@@ -97,11 +97,11 @@
                 <h2>Mendukung Perubahan Positif Bersama Aeiseb</h2>
                 <p>Aeiseb, sebagai organisasi yang peduli pada perubahan positif, dengan bangga mendukung program mualaf. Setiap langkah yang diambil adalah langkah untuk menciptakan inklusi, pemahaman, dan kedamaian. Bersama-sama, kita membangun jembatan antara perbedaan, mengubah hidup, dan menyuarakan kebaikan. Bersama Aeiseb, kita mendukung perubahan yang membanggakan, satu mualaf pada satu waktu.</p>
                 <a href="aieseb.html">
-                  <button class="showcase-button">Click Me!</button>
+                  <button class="showcase-button">Kolaborasi</button>
                 </a>
             </div>
             <div class="showcase-image">
-                <img src="https://via.placeholder.com/486x222" alt="">
+                <img src="assets/image/home/group-together.jpg" alt="">
             </div>
         </section>
       </div>
@@ -109,13 +109,13 @@
       <div class="showcase-container">
         <section class="showcase">
             <div class="showcase-image">
-                <img src="https://via.placeholder.com/486x222" alt="">
+                <img src="assets/image/home/sholat.jpg" alt="">
             </div>
             <div class="showcase-text">
                 <h2>Menginspirasi Melalui Cerita Mualaf</h2>
                 <p>Setiap cerita mualaf adalah perjalanan keimanan yang memukau. Dari kegelapan menuju cahaya, mereka menemukan kedamaian dan kekuatan dalam memeluk agama Islam. Di balik setiap cerita, terdapat keberanian, ketulusan, dan transformasi yang menginspirasi kita semua</p>
                 <a href="mualaf.html">
-                  <button class="showcase-button">Pelajari !</button>
+                  <button class="showcase-button">Eksplorasi</button>
                 </a>
             </div>
         </section>
@@ -124,56 +124,62 @@
 
     <footer>
       <div class="container-footer">
-        <div class="footer-img">
-          <img src="assets/image/aieseb_logo.png" alt="logo" />
-          <h6>AIESEB</h6>
+        <div class="footer-headline">
+          <div class="footer-img">
+            <img src="assets/image/aieseb_logo.png" alt="logo" />
+            <h5>AIESB</h5>
+          </div>
+          <p class="footer-desc">
+            Jl. Ketintang No.156, Ketintang, <br />
+            Kec. Gayungan, Surabaya, Jawa Timur 60231
+          </p>
         </div>
-        <p class="footer-desc">
-          Jl. Ketintang No.156, Ketintang, Kec. Gayungan, Surabaya, Jawa Timur
-          60231
-        </p>
 
-        <form action="" method="get">
-          <fieldset>
-            <legend>Quick Message</legend>
-            <table class="footer-table">
-              <tr>
-                <td>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Enter Your Name"
-                    required
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input
-                    type="text"
-                    name="email"
-                    placeholder="Your Email"
-                    required
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <textarea
-                    name="message"
-                    cols="30"
-                    rows="4"
-                    placeholder="Your Message"
-                    required
-                  ></textarea>
-                </td>
-              </tr>
-            </table>
-          </fieldset>
-        </form>
-        <div class="submit-btn">
-          <button type="submit" onclick="sendMessage()">Submit Now</button>
+        <div class="form-message">
+          <form action="" method="get">
+            <fieldset>
+              <legend>Quick Message</legend>
+              <table class="footer-table">
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter Your Name"
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <textarea
+                      name="message"
+                      cols="30"
+                      rows="4"
+                      placeholder="Your Message"
+                      required
+                    ></textarea>
+                  </td>
+                </tr>
+              </table>
+            </fieldset>
+          </form>
+
+          <div class="submit-btn">
+            <button type="submit" onclick="sendMessage()">Submit Now</button>
+          </div>
         </div>
+
         <!-- Error Toast -->
         <div
           id="errorToast"
@@ -215,8 +221,29 @@
           </div>
           <p class="toast-body">Success! Message sent.</p>
         </div>
+
+        <div class="footer-company">
+          <h3>Company</h3>
+          <ul>
+            <li>
+              <a href="#" class="text-white">Telkom Indonesia</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Universitas University</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Telkom IndiHome</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Yayasan Pendidikan Telkom</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </footer>    
+      <div class="copyright">
+        <p class="text-white mb-0">© 2024 AIESB</p>
+      </div>
+    </footer>   
 
     <script src="assets/js/script.js"></script>
     <script
