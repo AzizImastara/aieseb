@@ -15,6 +15,7 @@
     />
     <link rel="stylesheet" href="assets/css/nav.css" />
     <link rel="stylesheet" href="assets/css/aieseb.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
     <title>Aieseb</title>
   </head>
   <body>
@@ -165,6 +166,101 @@
         </div>
       </div>
     </div>
+    <footer>
+      <div class="container-footer">
+        <div class="footer-img">
+          <img src="assets/image/teslogo.png" alt="logo" />
+          <h6>AIESEB</h6>
+        </div>
+        <p class="footer-desc">
+          Jl. Ketintang No.156, Ketintang, Kec. Gayungan, Surabaya, Jawa Timur
+          60231
+        </p>
+
+        <form action="" method="get">
+          <fieldset>
+            <legend>Quick Message</legend>
+            <table class="footer-table">
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter Your Name"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <textarea
+                    name="message"
+                    cols="30"
+                    rows="4"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+        </form>
+        <div class="submit-btn">
+          <button type="submit" onclick="sendMessage()">Submit Now</button>
+        </div>
+        <!-- Error Toast -->
+        <div
+          id="errorToast"
+          class="toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          style="position: fixed; bottom: 20px; right: 20px; z-index: 9999"
+        >
+          <div class="toast-header-error">
+            <strong class="toast-head">Error</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <p class="toast-body">Please fill in all fields.</p>
+        </div>
+
+        <!-- Success Toast -->
+        <div
+          id="successToast"
+          class="toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          style="position: fixed; bottom: 20px; right: 20px; z-index: 9999"
+        >
+          <div class="toast-header-success">
+            <strong class="toast-head">Success</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <p class="toast-body">Success! Message sent.</p>
+        </div>
+      </div>
+    </footer>
 
     <script src="assets/js/script.js"></script>
     <script

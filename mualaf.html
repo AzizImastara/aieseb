@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="assets/css/nav.css" />
+    <link rel="stylesheet" href="assets/css/mualaf.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
     <title>Aieseb</title>
   </head>
   <body>
@@ -24,7 +32,189 @@
         </nav>
       </header>
     </div>
-    <h1>mualaf</h1>
+    <div class="mualaf">
+      <div class="container-mualaf">
+        <div
+          id="carouselExampleFade"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <!-- <img
+                src="assets/image/tahiyatakhir.png"
+                class="d-block w-50"
+                alt="..."
+              /> -->
+              <h3>Daniel Lopez (Abdullah Faqih)</h3>
+              <p>
+                Seorang pria asal Barcelona, Spanyol, menemukan Al-Insan
+                Edukatif Salamah Bimbingan Mualaf (AIESB) melalui rekomendasi
+                temannya setelah mencari makna hidup yang lebih dalam. Bergabung
+                dengan AIESB memberinya "rumah belajar" yang mendukung, di mana
+                dia bisa menjelajahi Islam tanpa takut dihakimi. Dukungan dari
+                AIESB memperkuat imannya, dan kini Faqih aktif dalam komunitas
+                Muslim setempat, berkontribusi dalam kegiatan sosial dan
+                mendukung hubungan antaragama. Perjalanan spiritualnya dengan
+                AIESB memberinya kedamaian batin dan tujuan hidup yang lebih
+                jelas. Mau tahu cerita lebih lengkap faqih? Yuk! Hubungi admin
+                di 08888888 dan temui faqih di sana
+              </p>
+            </div>
+            <div class="carousel-item">
+              <!-- <img
+                src="assets/image/rukuk.png"
+                class="d-block w-50"
+                alt="..."
+              /> -->
+              <h3>Michelle Rodriguez (Fatimah Azzahra)</h3>
+              <p>
+                Seorang wanita asal Madrid, Spanyol, memulai perjalanannya
+                menuju Islam di Al-Insan Edukatif Salamah Bimbingan Mualaf
+                (AIESB). Dia belajar dasar-dasar Islam dan praktik-praktik
+                ritual dalam lingkungan yang mendukung. Dengan dukungan dari
+                AIESB, Fatimah merasa terbimbing dengan baik saat dia mendalami
+                pemahamannya tentang Islam. Di AIESB, Fatimah merasa memiliki
+                "rumah belajar" yang siap menampung kebingungannya, sehingga
+                agamanya menjadi lebih kuat. Setelah memutuskan untuk memeluk
+                Islam, Fatimah aktif dalam komunitas Muslim setempat,
+                berpartisipasi dalam kegiatan amal, pengajaran, dan interaksi
+                antaragama. Perjalanan spiritualnya telah memberinya kedamaian
+                batin dan tujuan hidup yang lebih besar. Mau tahu cerita lebih
+                lengkap fatimah? Yuk! Hubungi admin di 08888888 dan temui
+                fatimah di sana
+              </p>
+            </div>
+            <!-- <div class="carousel-item">
+              <img
+                src="assets/image/sujud.png"
+                class="d-block w-50"
+                alt="..."
+              />
+            </div> -->
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container-footer">
+        <div class="footer-img">
+          <img src="assets/image/teslogo.png" alt="logo" />
+          <h6>AIESEB</h6>
+        </div>
+        <p class="footer-desc">
+          Jl. Ketintang No.156, Ketintang, Kec. Gayungan, Surabaya, Jawa Timur
+          60231
+        </p>
+
+        <form action="" method="get">
+          <fieldset>
+            <legend>Quick Message</legend>
+            <table class="footer-table">
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter Your Name"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <textarea
+                    name="message"
+                    cols="30"
+                    rows="4"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+        </form>
+        <div class="submit-btn">
+          <button type="submit" onclick="sendMessage()">Submit Now</button>
+        </div>
+        <!-- Error Toast -->
+        <div
+          id="errorToast"
+          class="toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          style="position: fixed; bottom: 20px; right: 20px; z-index: 9999"
+        >
+          <div class="toast-header-error">
+            <strong class="toast-head">Error</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <p class="toast-body">Please fill in all fields.</p>
+        </div>
+
+        <!-- Success Toast -->
+        <div
+          id="successToast"
+          class="toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          style="position: fixed; bottom: 20px; right: 20px; z-index: 9999"
+        >
+          <div class="toast-header-success">
+            <strong class="toast-head">Success</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <p class="toast-body">Success! Message sent.</p>
+        </div>
+      </div>
+    </footer>
+
     <script src="assets/js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
