@@ -1,7 +1,26 @@
 .container {
-  /* width: 0 80%; */
-  /* height: 100%; */
   margin: 80% 0;
+}
+
+body {
+  background: linear-gradient(
+      rgba(185, 148, 112, 0.5),
+      rgba(185, 148, 112, 0.5)
+    ),
+    url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
+      no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 35px;
+  font-family: 'Arial', sans-serif; /* Use appropriate Arabic font-family */
+  line-height: 1.5; /* Adjust line height as needed */
+  margin-bottom: 10px; /* Add some bottom margin */
 }
 
 .slider{
@@ -10,7 +29,19 @@
   margin: auto;
   overflow: hidden;
 }
-.slider img{
+
+.sliderArab{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider img,
+.sliderArab div .slideArab{
   width: 100%;
   display: none;
 }
@@ -19,23 +50,44 @@
   width: 100%;
   display: none; /* Initially hide all slide divs */
   text-align: center;
-
 }
 
-.slider div.slide iframe {
-  width: 100%; /* Set the width of the iframe */
-  height: 100%; /* Set the height of the iframe */
+.sliderArab div.slideArab {
+  color: red;
+  width: 80%; /* Set the width of the iframe */
+  height: 50%; /* Set the height of the iframe */
   margin: auto; /* Center the iframe vertically */
+  padding: 20px;
+}
+
+.sliderArab div.slidesArab {
+  background-color: #f0f0f0; /* Background color of the box */
+  border: 2px solid #333; /* Border of the box */
+  border-radius: 10px; /* Rounded corners of the box */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the box */
+  text-align: center; /* Center align text inside the box */
 }
 
 img.displaySlide,
-.slider div.displaySlide {
+.sliderArab div.displaySlide {
   display: block;
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
 .slider button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  padding: 10px 15px;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.sliderArab button{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -62,6 +114,18 @@ img.displaySlide,
     background-color: #f0f0f0;
   }
 
+  .showcase-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
   .showcase {
     display: flex;
     justify-content: space-between;
@@ -74,6 +138,11 @@ img.displaySlide,
     width: 100%;
     margin: 1em;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .showcase-text p {
+    font-size: 17px;
+    text-align: justify;
   }
 
   .showcase-image img{
@@ -90,3 +159,5 @@ img.displaySlide,
     line-height: 1.5; /* Adjust line height as needed */
     margin-bottom: 10px; /* Add some bottom margin */
   }
+
+  
