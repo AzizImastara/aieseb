@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/nav.css" />
     <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/footer.css">  
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />  
     <title>Aieseb</title>
   </head>
   <body>
@@ -13,7 +20,7 @@
         <label for="hamburger">&#9776;</label>
         <input type="checkbox" id="hamburger" />
         <div class="logo">
-          <img src="assets/image/teslogo.png" alt="Logo" id="logo" />
+          <img src="assets/image/aieseb_logo.png" alt="Logo" id="logo" />
         </div>
         <nav>
           <ul>
@@ -26,92 +33,196 @@
       </header>
     </div>
 
-    <div class="slider">
-      <div class="slides">
-          <img class="slide" src="assets/image/home/668124.png" alt="Image #1">
-          <img class="slide" src="assets/image/home/769160.jpg" alt="Image #2">
-          <img class="slide" src="assets/image/home/CHAD SAILOR MOON.png" alt="Image #3">
+    <div class="index">
+      <div class="slider">
+        <div class="slides">
+            <img class="slide" src="assets/image/home/668124.png" alt="Image #1">
+            <img class="slide" src="assets/image/home/769160.jpg" alt="Image #2">
+            <img class="slide" src="assets/image/home/CHAD SAILOR MOON.png" alt="Image #3">
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094</button>
+        <button class="next" onclick="nextSlide()">&#10095</button>
       </div>
-      <button class="prev" onclick="prevSlide()">&#10094</button>
-      <button class="next" onclick="nextSlide()">&#10095</button>
+
+      <br>
+      <div class="sliderArab">
+        <div class="slidesArab">
+          <div class="slideArab">
+            <h1>Hadis</h1>
+            <p class="arab"> أَيُّهَا الَّذِينَ آمَنُوا ادْخُلُوا فِي السِّلْمِ كَافَّةً</p>
+            <p>“Wahai orang-orang yang beriman, masuklah kalian dalam Islam secara kaffah (secara totalitas)” (QS. Al-Baqarah[2]: 208)</p>
+          </div>
+          <div class="slideArab">
+            <h1>Hadis</h1>
+            <p class="arab">شَهِدَ اللهُ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ وَالْمَلَائِكَةُ وَأُولُو الْعِلْمِ قَائِمًا بِالْقِسْطِ لَا إِلَهَ إِلَّا هُوَ الْعَزِيزُ الْحَكِيمُ </p>
+            <p>“Allah menyatakan bahwasanya tidak ada Tuhan (yang berhak disembah) melainkan Dia, Yang menegakkan keadilan. Para Malaikat dan orang-orang yang berilmu (juga menyatakan yang demikian itu). Tak ada Tuhan (yang berhak disembah) melainkan Dia, Yang Maha Perkasa lagi Maha Bijaksana.” (QS. Ali Imran [3]: 18)</p>
+          </div>
+          <div class="slideArab">
+            <h1>Hadis</h1>
+            <p class="arab">وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللهَ مُخْلِصِينَ لَهُ الدِّينَ حُنَفَاءَ وَيُقِيمُوا الصَّلَاةَ وَيُؤْتُوا الزَّكَاةَ وَذَلِكَ دِينُ الْقَيِّمَةِ </p>
+            <p>“Padahal mereka tidak disuruh kecuali supaya menyembah Allah dengan memurnikan ketaatan kepada-Nya dalam (menjalankan) agama dengan lurus, dan supaya mereka mendirikan salat dan menunaikan zakat, dan yang demikian itulah agama yang lurus.” (QS. Al-Bayyinah [98]: 5)</p>
+          </div>
+          <div class="slideArab">
+            <h1>Hadis</h1>
+            <p class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا كُتِبَ عَلَيْكُمُ الصِّيَامُ كَمَا كُتِبَ عَلَى الَّذِينَ مِنْ قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ </p>
+            <p>“Hai orang-orang yang beriman, diwajibkan atas kamu berpuasa sebagaimana diwajibkan atas orang-orang sebelum kamu agar kamu bertakwa.” (QS. Al-Baqarah [2]: 183)</p>
+          </div>
+          <div class="slideArab">
+            <h1>Hadis</h1>
+            <p class="arab">وَلِلَّهِ عَلَى النَّاسِ حِجُّ الْبَيْتِ مَنِ اسْتَطَاعَ إِلَيْهِ سَبِيلًا وَمَنْ كَفَرَ فَإِنَّ اللهَ غَنِيٌّ عَنِ الْعَالَمِينَ </p>
+            <p>“Mengerjakan haji adalah kewajiban manusia terhadap Allah, yaitu (bagi) orang yang sanggup mengadakan perjalanan ke Baitullah. Barangsiapa mengingkarinya, maka sesungguhnya Allah Maha Kaya dari semesta alam.” (QS. Ali Imran [3]: 97)</p>
+          </div>
+        </div>
+      </div>
+      <br>
+      
+      <div class="showcase-container">
+        <section class="showcase">
+            <div class="showcase-image">
+                <img src="https://via.placeholder.com/486x222" alt="">
+            </div>
+            <div class="showcase-text">
+                <h2>Mari Belajar Bersama</h2>
+                <p>Mari bersama-sama belajar menjadi mualaf dengan memahami inti ajaran Islam: Syahadat, Shalat, Zakat, Puasa, dan Haji. Di setiap langkah, kita temukan keindahan dan kedalaman iman yang membimbing kita pada jalan kebenaran. Bergabunglah dengan kami dalam perjalanan ini, menuju kesadaran, keberkahan, dan kebahagiaan yang tiada tara.</p>
+                <a href="belajar.html">
+                  <button class="showcase-button">Click Me!</button>
+                </a>
+            </div>
+        </section>
+      </div>
+      
+      <div class="showcase-container">
+        <section class="showcase">
+            <div class="showcase-text">
+                <h2>Mendukung Perubahan Positif Bersama Aeiseb</h2>
+                <p>Aeiseb, sebagai organisasi yang peduli pada perubahan positif, dengan bangga mendukung program mualaf. Setiap langkah yang diambil adalah langkah untuk menciptakan inklusi, pemahaman, dan kedamaian. Bersama-sama, kita membangun jembatan antara perbedaan, mengubah hidup, dan menyuarakan kebaikan. Bersama Aeiseb, kita mendukung perubahan yang membanggakan, satu mualaf pada satu waktu.</p>
+                <a href="aieseb.html">
+                  <button class="showcase-button">Click Me!</button>
+                </a>
+            </div>
+            <div class="showcase-image">
+                <img src="https://via.placeholder.com/486x222" alt="">
+            </div>
+        </section>
+      </div>
+
+      <div class="showcase-container">
+        <section class="showcase">
+            <div class="showcase-image">
+                <img src="https://via.placeholder.com/486x222" alt="">
+            </div>
+            <div class="showcase-text">
+                <h2>Menginspirasi Melalui Cerita Mualaf</h2>
+                <p>Setiap cerita mualaf adalah perjalanan keimanan yang memukau. Dari kegelapan menuju cahaya, mereka menemukan kedamaian dan kekuatan dalam memeluk agama Islam. Di balik setiap cerita, terdapat keberanian, ketulusan, dan transformasi yang menginspirasi kita semua</p>
+                <a href="mualaf.html">
+                  <button class="showcase-button">Pelajari !</button>
+                </a>
+            </div>
+        </section>
+      </div>
     </div>
 
-    <br>
-    <div class="sliderArab">
-      <div class="slidesArab">
-        <div class="slideArab">
-          <h1>1</h1>
-          <p class="arab">ا أَيُّهَا الَّذِينَ آمَنُوا ادْخُلُوا فِي السِّلْمِ كَافَّةً</p>
-          <p>“Wahai orang-orang yang beriman, masuklah kalian dalam Islam secara kaffah (secara totalitas)” (QS. Al-Baqarah[2]: 208)</p>
+    <footer>
+      <div class="container-footer">
+        <div class="footer-img">
+          <img src="assets/image/aieseb_logo.png" alt="logo" />
+          <h6>AIESEB</h6>
         </div>
-        <div class="slideArab">
-          <h1>2</h1>
-          <p class="arab">شَهِدَ اللهُ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ وَالْمَلَائِكَةُ وَأُولُو الْعِلْمِ قَائِمًا بِالْقِسْطِ لَا إِلَهَ إِلَّا هُوَ الْعَزِيزُ الْحَكِيمُ </p>
-          <p>“Allah menyatakan bahwasanya tidak ada Tuhan (yang berhak disembah) melainkan Dia, Yang menegakkan keadilan. Para Malaikat dan orang-orang yang berilmu (juga menyatakan yang demikian itu). Tak ada Tuhan (yang berhak disembah) melainkan Dia, Yang Maha Perkasa lagi Maha Bijaksana.” (QS. Ali Imran [3]: 18)</p>
+        <p class="footer-desc">
+          Jl. Ketintang No.156, Ketintang, Kec. Gayungan, Surabaya, Jawa Timur
+          60231
+        </p>
+
+        <form action="" method="get">
+          <fieldset>
+            <legend>Quick Message</legend>
+            <table class="footer-table">
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter Your Name"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <textarea
+                    name="message"
+                    cols="30"
+                    rows="4"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+        </form>
+        <div class="submit-btn">
+          <button type="submit" onclick="sendMessage()">Submit Now</button>
         </div>
-        <div class="slideArab">
-          <h1>3</h1>
-          <p class="arab">وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللهَ مُخْلِصِينَ لَهُ الدِّينَ حُنَفَاءَ وَيُقِيمُوا الصَّلَاةَ وَيُؤْتُوا الزَّكَاةَ وَذَلِكَ دِينُ الْقَيِّمَةِ </p>
-          <p>“Padahal mereka tidak disuruh kecuali supaya menyembah Allah dengan memurnikan ketaatan kepada-Nya dalam (menjalankan) agama dengan lurus, dan supaya mereka mendirikan salat dan menunaikan zakat, dan yang demikian itulah agama yang lurus.” (QS. Al-Bayyinah [98]: 5)</p>
+        <!-- Error Toast -->
+        <div
+          id="errorToast"
+          class="toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          style="position: fixed; bottom: 20px; right: 20px; z-index: 9999"
+        >
+          <div class="toast-header-error">
+            <strong class="toast-head">Error</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <p class="toast-body">Please fill in all fields.</p>
         </div>
-        <div class="slideArab">
-          <h1>4</h1>
-          <p class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا كُتِبَ عَلَيْكُمُ الصِّيَامُ كَمَا كُتِبَ عَلَى الَّذِينَ مِنْ قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ </p>
-          <p>“Hai orang-orang yang beriman, diwajibkan atas kamu berpuasa sebagaimana diwajibkan atas orang-orang sebelum kamu agar kamu bertakwa.” (QS. Al-Baqarah [2]: 183)</p>
-        </div>
-        <div class="slideArab">
-          <h1>5</h1>
-          <p class="arab">وَلِلَّهِ عَلَى النَّاسِ حِجُّ الْبَيْتِ مَنِ اسْتَطَاعَ إِلَيْهِ سَبِيلًا وَمَنْ كَفَرَ فَإِنَّ اللهَ غَنِيٌّ عَنِ الْعَالَمِينَ </p>
-          <p>“Mengerjakan haji adalah kewajiban manusia terhadap Allah, yaitu (bagi) orang yang sanggup mengadakan perjalanan ke Baitullah. Barangsiapa mengingkarinya, maka sesungguhnya Allah Maha Kaya dari semesta alam.” (QS. Ali Imran [3]: 97)</p>
+
+        <!-- Success Toast -->
+        <div
+          id="successToast"
+          class="toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          style="position: fixed; bottom: 20px; right: 20px; z-index: 9999"
+        >
+          <div class="toast-header-success">
+            <strong class="toast-head">Success</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <p class="toast-body">Success! Message sent.</p>
         </div>
       </div>
-    </div>
-    
-    <div class="showcase-container">
-      <section class="showcase">
-          <div class="showcase-image">
-              <img src="https://via.placeholder.com/486x222" alt="">
-          </div>
-          <div class="showcase-text">
-              <h2>Mari Belajar Bersama</h2>
-              <p>Mari bersama-sama belajar menjadi mualaf dengan memahami inti ajaran Islam: Syahadat, Shalat, Zakat, Puasa, dan Haji. Di setiap langkah, kita temukan keindahan dan kedalaman iman yang membimbing kita pada jalan kebenaran. Bergabunglah dengan kami dalam perjalanan ini, menuju kesadaran, keberkahan, dan kebahagiaan yang tiada tara.</p>
-              <a href="belajar.html">
-                <button class="showcase-button">Click Me!</button>
-              </a>
-          </div>
-      </section>
-    </div>
-    
-    <div class="showcase-container">
-      <section class="showcase">
-          <div class="showcase-text">
-              <h2>Mendukung Perubahan Positif Bersama Aeiseb</h2>
-              <p>Aeiseb, sebagai organisasi yang peduli pada perubahan positif, dengan bangga mendukung program mualaf. Setiap langkah yang diambil adalah langkah untuk menciptakan inklusi, pemahaman, dan kedamaian. Bersama-sama, kita membangun jembatan antara perbedaan, mengubah hidup, dan menyuarakan kebaikan. Bersama Aeiseb, kita mendukung perubahan yang membanggakan, satu mualaf pada satu waktu.</p>
-              <a href="aieseb.html">
-                <button class="showcase-button">Click Me!</button>
-              </a>
-          </div>
-          <div class="showcase-image">
-              <img src="https://via.placeholder.com/486x222" alt="">
-          </div>
-      </section>
-    </div>
-
-    <div class="showcase-container">
-      <section class="showcase">
-          <div class="showcase-image">
-              <img src="https://via.placeholder.com/486x222" alt="">
-          </div>
-          <div class="showcase-text">
-              <h2>Menginspirasi Melalui Cerita Mualaf</h2>
-              <p>Setiap cerita mualaf adalah perjalanan keimanan yang memukau. Dari kegelapan menuju cahaya, mereka menemukan kedamaian dan kekuatan dalam memeluk agama Islam. Di balik setiap cerita, terdapat keberanian, ketulusan, dan transformasi yang menginspirasi kita semua</p>
-              <a href="mualaf.html">
-                <button class="showcase-button">Pelajari !</button>
-              </a>
-          </div>
-      </section>
-    </div>
+    </footer>    
 
     <script src="assets/js/script.js"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+    ></script>
   </body>
 </html>
