@@ -6,6 +6,7 @@ document.getElementById("logo").addEventListener("click", function () {
   });
 });
 
+// Slideer / Carousel
 document.addEventListener("DOMContentLoaded", initializeSlider);
 
 function initializeSlider() {
@@ -16,13 +17,10 @@ function initializeSlider() {
   arabIntervalId = setInterval(nextArabSlide, 5000);
 }
 
+// Img slide
 const slides = document.querySelectorAll(".slides .slide");
 let slideIndex = 0;
 let intervalId = null;
-
-const arabSlides = document.querySelectorAll(".slidesArab .slideArab");
-let arabSlideIndex = 0;
-let arabIntervalId = null;
 
 function showSlide(index) {
   if (index >= slides.length) {
@@ -55,6 +53,11 @@ function nextSlide() {
   }
   showSlide(slideIndex);
 }
+
+// Arabic Slide
+const arabSlides = document.querySelectorAll(".slidesArab .slideArab");
+let arabSlideIndex = 0;
+let arabIntervalId = null;
 
 function showArabSlide(index) {
   if (index >= arabSlides.length) {

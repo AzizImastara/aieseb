@@ -1,5 +1,5 @@
-.container {
-  margin: 80% 0;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .index {
@@ -10,6 +10,7 @@
     url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
       no-repeat;
   background-size: cover;
+  
 }
 
 h1 {
@@ -40,7 +41,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FEFAE0;
+  background-color: #5f6f52;
 }
 
 .slider img{
@@ -50,15 +51,19 @@ h2 {
 }
 
 .sliderArab div.slideArab {
-  width: 80%;
+  width: 100%;
   height: 50%;
-  margin: auto;
+  margin: 30px;
   padding: 20px;
   display: none;
+  background-color: #FEFAE0;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
 }
 
 .sliderArab div.slidesArab {
-  text-align: center;
+  text-align: center ;
+  width: 80%;
 }
 
 img.displaySlide,
