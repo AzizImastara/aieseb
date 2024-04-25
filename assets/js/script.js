@@ -113,122 +113,6 @@ function sendMessage() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// punya button belajar
-var tombol = document.getElementsByClassName("btn");
-
-for (var i = 0; i < tombol.length; i++) {
-  tombol[i].addEventListener("click", function() {
-    // Mengubah teks tombol saat diklik
-    this.innerHTML = "Tombol telah diklik";
-    window.location.href = "syahadat.html";
-  });
-}
-
-// Punya Quiz
-const quizData = [
-  {
-    question: "Rukun Iman ada berapa?",
-    a: "6",
-    b: "1",
-    c: "5",
-    d: "4",
-    correct: "a",
-  },
-  {
-    question: "Rukun Islam ada berapa?",
-    a: "10",
-    b: "5",
-    c: "4",
-    d: "2",
-    correct: "b",
-  },
-  {
-    question: "shalat shubuh berapa rakaat?",
-    a: "6",
-    b: "4",
-    c: "2",
-    d: "1",
-    correct: "c",
-  },
-  {
-    question: "rukun islam yang dilaksanakan di bulan ramadhan adalah?",
-    a: "shalat",
-    b: "haji",
-    c: "zakat",
-    d: "puasa",
-    correct: "d",
-  },
-];
-
-const nameInput = document.getElementById('name');
-const quiz= document.getElementById('quiz')
-const answerEls = document.querySelectorAll('.answer')
-const questionEl = document.getElementById('question')
-const a_text = document.getElementById('a_text')
-const b_text = document.getElementById('b_text')
-const c_text = document.getElementById('c_text')
-const d_text = document.getElementById('d_text')
-const submitBtn = document.getElementById('submit')
-let currentQuiz = 0
-let score = 0
-loadQuiz()
-function loadQuiz() {
-  deselectAnswers()
-  const currentQuizData = quizData[currentQuiz]
-  questionEl.innerText = currentQuizData.question
-  a_text.innerText = currentQuizData.a
-  b_text.innerText = currentQuizData.b
-  c_text.innerText = currentQuizData.c
-  d_text.innerText = currentQuizData.d
-}
-function deselectAnswers() {
-  answerEls.forEach(answerEl => answerEl.checked = false)
-}
-function getSelected() {
-  let answer
-  answerEls.forEach(answerEl => {
-    if(answerEl.checked) {
-      answer = answerEl.id
-    }
-  })
-  return answer
-}
-
-submitBtn.addEventListener('click', () => {
-  const name = nameInput.value; 
-  const answer = getSelected(); 
-  if (answer !== undefined) {
-    if (answer === quizData[currentQuiz].correct) {
-      score++;
-    }
-    currentQuiz++;
-    if (currentQuiz < quizData.length) {
-      loadQuiz(); 
-    } else if(score==4) {
-      quiz.innerHTML = `
-        <h2>Selamat, ${name}! Kamu telah menyelesaikan kuis.</h2>
-        <h2>Kamu menjawab ${score} dari ${quizData.length} pertanyaan secara benar.</h2>
-        <h2>kelas yang cocok untuk kamu adalah kelas menengah</h2>
-        <h2>Semoga Istiqamah</h2>
-        <h2>Pembimbing kamu..</h2>
-        <button onclick="window.location.href = 'index.html';">Selesai</button>
-      `;
-    }
-    else if(score<4){
-      quiz.innerHTML = `
-      <h2>Selamat, ${name}! Kamu telah menyelesaikan kuis.</h2>
-        <h2>Kamu menjawab ${score} dari ${quizData.length} pertanyaan secara benar.</h2>
-      <h2>kelas yang cocok untuk kamu adalah kelas dasar</h2>
-      <h2>Semoga Istiqamah</h2>
-      <h2>Pembimbing kamu..</h2>
-      <button onclick="window.location.href = 'index.html';">Selesai</button>
-      `;
-    }
-  } else {
-    alert('Silakan pilih jawaban sebelum melanjutkan.'); 
-  }
-});
-
 let getYearNumber = new Date().getFullYear().toString();
 let getMonth = new Date().getMonth() + 1;
 let monthZero = getMonth.toString().padStart(2, "0");
@@ -285,3 +169,118 @@ function jadwalSholat() {
     },
   };
 }
+
+// punya button belajar
+var tombol = document.getElementsByClassName("btn");
+
+for (var i = 0; i < tombol.length; i++) {
+  tombol[i].addEventListener("click", function () {
+    // Mengubah teks tombol saat diklik
+    this.innerHTML = "Tombol telah diklik";
+    window.location.href = "syahadat.html";
+  });
+}
+
+// Punya Quiz
+const quizData = [
+  {
+    question: "Rukun Iman ada berapa?",
+    a: "6",
+    b: "1",
+    c: "5",
+    d: "4",
+    correct: "a",
+  },
+  {
+    question: "Rukun Islam ada berapa?",
+    a: "10",
+    b: "5",
+    c: "4",
+    d: "2",
+    correct: "b",
+  },
+  {
+    question: "shalat shubuh berapa rakaat?",
+    a: "6",
+    b: "4",
+    c: "2",
+    d: "1",
+    correct: "c",
+  },
+  {
+    question: "rukun islam yang dilaksanakan di bulan ramadhan adalah?",
+    a: "shalat",
+    b: "haji",
+    c: "zakat",
+    d: "puasa",
+    correct: "d",
+  },
+];
+
+const nameInput = document.getElementById("name");
+const quiz = document.getElementById("quiz");
+const answerEls = document.querySelectorAll(".answer");
+const questionEl = document.getElementById("question");
+const a_text = document.getElementById("a_text");
+const b_text = document.getElementById("b_text");
+const c_text = document.getElementById("c_text");
+const d_text = document.getElementById("d_text");
+const submitBtn = document.getElementById("submit");
+let currentQuiz = 0;
+let score = 0;
+loadQuiz();
+function loadQuiz() {
+  deselectAnswers();
+  const currentQuizData = quizData[currentQuiz];
+  questionEl.innerText = currentQuizData.question;
+  a_text.innerText = currentQuizData.a;
+  b_text.innerText = currentQuizData.b;
+  c_text.innerText = currentQuizData.c;
+  d_text.innerText = currentQuizData.d;
+}
+function deselectAnswers() {
+  answerEls.forEach((answerEl) => (answerEl.checked = false));
+}
+function getSelected() {
+  let answer;
+  answerEls.forEach((answerEl) => {
+    if (answerEl.checked) {
+      answer = answerEl.id;
+    }
+  });
+  return answer;
+}
+
+submitBtn.addEventListener("click", () => {
+  const name = nameInput.value;
+  const answer = getSelected();
+  if (answer !== undefined) {
+    if (answer === quizData[currentQuiz].correct) {
+      score++;
+    }
+    currentQuiz++;
+    if (currentQuiz < quizData.length) {
+      loadQuiz();
+    } else if (score == 4) {
+      quiz.innerHTML = `
+        <h2>Selamat, ${name}! Kamu telah menyelesaikan kuis.</h2>
+        <h2>Kamu menjawab ${score} dari ${quizData.length} pertanyaan secara benar.</h2>
+        <h2>kelas yang cocok untuk kamu adalah kelas menengah</h2>
+        <h2>Semoga Istiqamah</h2>
+        <h2>Pembimbing kamu..</h2>
+        <button onclick="window.location.href = 'index.html';">Selesai</button>
+      `;
+    } else if (score < 4) {
+      quiz.innerHTML = `
+      <h2>Selamat, ${name}! Kamu telah menyelesaikan kuis.</h2>
+        <h2>Kamu menjawab ${score} dari ${quizData.length} pertanyaan secara benar.</h2>
+      <h2>kelas yang cocok untuk kamu adalah kelas dasar</h2>
+      <h2>Semoga Istiqamah</h2>
+      <h2>Pembimbing kamu..</h2>
+      <button onclick="window.location.href = 'index.html';">Selesai</button>
+      `;
+    }
+  } else {
+    alert("Silakan pilih jawaban sebelum melanjutkan.");
+  }
+});
