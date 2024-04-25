@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
  .belajar-container{
+=======
+.belajar-container {
+>>>>>>> syahrul
   width: 80% 0;
 }
 
- * {
+* {
   box-sizing: border-box;
   padding: 0;
 }
@@ -23,15 +27,18 @@ body {
 .header {
   padding: 30px;
   text-align: center;
-  background: linear-gradient(rgba(254, 250, 224,0.3), 
-  rgba(254, 250, 224,0.3)), url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")no-repeat;
+  background: linear-gradient(
+      rgba(254, 250, 224, 0.3),
+      rgba(254, 250, 224, 0.3)
+    ),
+    url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
+      no-repeat;
   background-size: cover;
 }
 
 .header h1 {
   font-size: 50px;
 }
-
 
 /* Create two unequal columns that floats next to each other */
 
@@ -41,8 +48,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color:rgb(185, 148, 112);
-  color:black;
+  background-color: rgb(185, 148, 112);
+  color: black;
   font-size: 16px;
   padding: 30px 70px;
   border: none;
@@ -53,7 +60,7 @@ body {
 
 .leftcolumn .btn:hover {
   background-color: black;
-  color:rgb(185, 148, 112);
+  color: rgb(185, 148, 112);
 }
 
 .rightcolumn .btn {
@@ -77,46 +84,45 @@ body {
   color: white;
 }
 /* Left column */
-.leftcolumn {   
+.leftcolumn {
   float: left;
   width: 100%;
-  background-image: linear-gradient(rgb(185, 148, 112), 
-  rgb(185, 148, 112)),  url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
-  no-repeat;
+  background-image: linear-gradient(rgb(185, 148, 112), rgb(185, 148, 112)),
+    url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
+      no-repeat;
 }
 
 /* Right column */
 .rightcolumn {
   float: left;
   width: 25%;
-  background-image: linear-gradient(rgb(185, 148, 112), 
-  rgb(185, 148, 112)), url("images/bg.jpg");
+  background-image: linear-gradient(rgb(185, 148, 112), rgb(185, 148, 112)),
+    url("images/bg.jpg");
   padding-left: 20px;
 }
 
-
-.logo{
-opacity: 1;
-width: 80px;
+.logo {
+  opacity: 1;
+  width: 80px;
   height: 100%;
   cursor: pointer;
 }
 
-.belajar{
-opacity: 0.5;
-height: 400px;
-width: 100%;
-padding: 0;
+.belajar {
+  opacity: 0.5;
+  height: 400px;
+  width: 100%;
+  padding: 0;
 }
 /* Add a card effect for articles */
 .card {
   background: linear-gradient(
-    rgba(185, 148, 112, 0.5),
-    rgba(185, 148, 112, 0.5)
-  ),
-  url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
-    no-repeat;
-    background-size: cover;
+      rgba(185, 148, 112, 0.5),
+      rgba(185, 148, 112, 0.5)
+    ),
+    url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
+      no-repeat;
+  background-size: cover;
   padding: 20px;
   margin-top: 20px;
 }
@@ -136,9 +142,13 @@ padding: 0;
   margin-top: 20px;
 }
 
-.content{
-  background: linear-gradient(rgba(254, 250, 224,0.3), 
-  rgba(254, 250, 224,0.3)), url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")no-repeat;
+.content {
+  background: linear-gradient(
+      rgba(254, 250, 224, 0.3),
+      rgba(254, 250, 224, 0.3)
+    ),
+    url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
+      no-repeat;
   background-size: cover;
   
 }
@@ -154,21 +164,26 @@ padding: 0;
   clear: both;
 }
 
-p{
+p {
   padding-top: 20px;
   text-align: justify;
 }
+<<<<<<< HEAD
 .column-desc{
+=======
+.column-desc {
+>>>>>>> syahrul
   bottom: 200px;
 }
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
+  .leftcolumn,
+  .rightcolumn {
     width: 100%;
     padding: 0;
   }
-    .column-video{
-      width: 100%;
-      justify-content: center;
-    }
+  .column-video {
+    width: 100%;
+    justify-content: center;
   }
+}
