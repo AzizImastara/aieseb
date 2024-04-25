@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aieseb</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,231 +13,140 @@
     <link rel="stylesheet" href="assets/css/nav.css" />
     <link rel="stylesheet" href="assets/css/mualaf.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
-    <title>Aieseb</title>
   </head>
+
   <body>
-    <div class="nav-container">
-      <header>
-        <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger" />
-        <div class="logo">
-          <img src="assets/image/aieseb_logo.png" alt="Logo" id="logo" />
-        </div>
-        <nav>
-          <ul>
-            <li><a href="./index.html">Beranda</a></li>
-            <li><a href="./belajar.html">Yuk Belajar!</a></li>
-            <li><a href="./aieseb.html">AIESB</a></li>
-            <li><a href="./mualaf.html">Cerita Mualaf</a></li>
-          </ul>
-        </nav>
-      </header>
-    </div>
     <div class="mualaf">
       <div class="container-mualaf">
-        <div
-          id="carouselExampleFade"
-          class="carousel slide carousel-fade"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <!-- <img
-                src="assets/image/tahiyatakhir.png"
-                class="d-block w-50"
-                alt="..."
-              /> -->
-              <h3>Daniel Lopez (Abdullah Faqih)</h3>
-              <p>
-                Seorang pria asal Barcelona, Spanyol, menemukan Al-Insan
-                Edukatif Salamah Bimbingan Mualaf (AIESB) melalui rekomendasi
-                temannya setelah mencari makna hidup yang lebih dalam. Bergabung
-                dengan AIESB memberinya "rumah belajar" yang mendukung, di mana
-                dia bisa menjelajahi Islam tanpa takut dihakimi. Dukungan dari
-                AIESB memperkuat imannya, dan kini Faqih aktif dalam komunitas
-                Muslim setempat, berkontribusi dalam kegiatan sosial dan
-                mendukung hubungan antaragama. Perjalanan spiritualnya dengan
-                AIESB memberinya kedamaian batin dan tujuan hidup yang lebih
-                jelas. Mau tahu cerita lebih lengkap faqih? Yuk! Hubungi admin
-                di 08888888 dan temui faqih di sana
-              </p>
-            </div>
-            <div class="carousel-item">
-              <!-- <img
-                src="assets/image/rukuk.png"
-                class="d-block w-50"
-                alt="..."
-              /> -->
-              <h3>Michelle Rodriguez (Fatimah Azzahra)</h3>
-              <p>
-                Seorang wanita asal Madrid, Spanyol, memulai perjalanannya
-                menuju Islam di Al-Insan Edukatif Salamah Bimbingan Mualaf
-                (AIESB). Dia belajar dasar-dasar Islam dan praktik-praktik
-                ritual dalam lingkungan yang mendukung. Dengan dukungan dari
-                AIESB, Fatimah merasa terbimbing dengan baik saat dia mendalami
-                pemahamannya tentang Islam. Di AIESB, Fatimah merasa memiliki
-                "rumah belajar" yang siap menampung kebingungannya, sehingga
-                agamanya menjadi lebih kuat. Setelah memutuskan untuk memeluk
-                Islam, Fatimah aktif dalam komunitas Muslim setempat,
-                berpartisipasi dalam kegiatan amal, pengajaran, dan interaksi
-                antaragama. Perjalanan spiritualnya telah memberinya kedamaian
-                batin dan tujuan hidup yang lebih besar. Mau tahu cerita lebih
-                lengkap fatimah? Yuk! Hubungi admin di 08888888 dan temui
-                fatimah di sana
-              </p>
-            </div>
-            <!-- <div class="carousel-item">
-              <img
-                src="assets/image/sujud.png"
-                class="d-block w-50"
-                alt="..."
+        <div x-data="jadwalSholat()" x-init="connect()">
+          <div class="mb-3">
+            <div class="content-option d-flex">
+              <input
+                type="text"
+                class="form-control"
+                x-model="search"
+                placeholder="Cari Kota"
               />
-            </div> -->
+              <div class="content-option-list">Pilih Daerah</div>
+
+              <select class="form-select" @change="jadwal($event.target.value)">
+                <option selected>Tekan Untuk Melihat</option>
+                <template x-for="city in filteredCities" :key="city.id">
+                  <option x-text="city.lokasi" :value="city.id"></option>
+                </template>
+              </select>
+            </div>
+
+            <div class="mt-4">
+              <template x-if="!loadingJadwal">
+                <div>
+                  <div class="lokasi-sholat">
+                    <h2 class="lokasi-sholat-header">JADWAL SHOLAT UNTUK</h2>
+                    <h2 x-text="lokasi"></h2>
+                  </div>
+
+                  <div class="table-responsive">
+                    <table class="table table-vcenter">
+                      <thead>
+                        <tr>
+                          <th>Tanggal</th>
+                          <th>Subuh</th>
+                          <th>Dzuhur</th>
+                          <th>Ashar</th>
+                          <th>Maghrib</th>
+                          <th>Isya</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <template
+                          x-for="jadwal in jadwalSholat"
+                          :key="jadwal.date"
+                        >
+                          <tr>
+                            <td x-text="jadwal.tanggal"></td>
+                            <td x-text="jadwal.subuh"></td>
+                            <td x-text="jadwal.dzuhur"></td>
+                            <td x-text="jadwal.ashar"></td>
+                            <td x-text="jadwal.maghrib"></td>
+                            <td x-text="jadwal.isya"></td>
+                          </tr>
+                        </template>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </template>
+            </div>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="container-footer">
-        <div class="footer-headline">
-          <div class="footer-img">
-            <img src="assets/image/aieseb_logo.png" alt="logo" />
-            <h5>AIESB</h5>
-          </div>
-          <p class="footer-desc">
-            Jl. Ketintang No.156, Ketintang, <br />
-            Kec. Gayungan, Surabaya, Jawa Timur 60231
-          </p>
-        </div>
 
-        <div class="form-message">
-          <form action="" method="get">
-            <fieldset>
-              <legend>Quick Message</legend>
-              <table class="footer-table">
-                <tr>
-                  <td>
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Enter Your Name"
-                      required
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                      type="text"
-                      name="email"
-                      placeholder="Your Email"
-                      required
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <textarea
-                      name="message"
-                      cols="30"
-                      rows="4"
-                      placeholder="Your Message"
-                      required
-                    ></textarea>
-                  </td>
-                </tr>
-              </table>
-            </fieldset>
-          </form>
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script>
+      let getYearNumber = new Date().getFullYear().toString();
+      let getMonth = new Date().getMonth() + 1;
+      let monthZero = getMonth.toString().padStart(2, "0");
 
-          <div class="submit-btn">
-            <button type="submit" onclick="sendMessage()">Submit Now</button>
-          </div>
-        </div>
+      function jadwalSholat() {
+        return {
+          allCity: [],
+          jadwalSholat: [],
+          loading: true,
+          loadingJadwal: true,
+          lokasi: "",
+          search: "",
+          selectedCityId: "1638",
+          connect() {
+            fetch("https://api.myquran.com/v2/sholat/kota/semua")
+              .then((response) => response.json())
+              .then((data) => {
+                this.allCity = data.data;
+                this.loading = false;
 
-        <!-- Error Toast -->
-        <div
-          id="errorToast"
-          class="toast hide"
-          role="alert"
-          aria-live="assertive"
-          aria-atomic="true"
-          style="position: fixed; bottom: 20px; right: 20px; z-index: 9999"
-        >
-          <div class="toast-header-error">
-            <strong class="toast-head">Error</strong>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="toast"
-              aria-label="Close"
-            ></button>
-          </div>
-          <p class="toast-body">Please fill in all fields.</p>
-        </div>
-
-        <!-- Success Toast -->
-        <div
-          id="successToast"
-          class="toast hide"
-          role="alert"
-          aria-live="assertive"
-          aria-atomic="true"
-          style="position: fixed; bottom: 20px; right: 20px; z-index: 9999"
-        >
-          <div class="toast-header-success">
-            <strong class="toast-head">Success</strong>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="toast"
-              aria-label="Close"
-            ></button>
-          </div>
-          <p class="toast-body">Success! Message sent.</p>
-        </div>
-
-        <div class="footer-company">
-          <h3>Company</h3>
-          <ul>
-            <li>
-              <a href="#" class="text-white">Telkom Indonesia</a>
-            </li>
-            <li>
-              <a href="#" class="text-white">Universitas University</a>
-            </li>
-            <li>
-              <a href="#" class="text-white">Telkom IndiHome</a>
-            </li>
-            <li>
-              <a href="#" class="text-white">Yayasan Pendidikan Telkom</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="copyright">
-        <p class="text-white mb-0">© 2024 AIESB</p>
-      </div>
-    </footer>
-
+                const defaultCity = this.allCity.find(
+                  (city) => city.id === this.selectedCityId
+                );
+                if (defaultCity) {
+                  this.jadwal(defaultCity.id);
+                }
+              })
+              .catch((error) => {
+                console.error("Error fetching data:", error);
+                this.loading = false;
+              });
+          },
+          jadwal(id) {
+            this.loadingJadwal = true;
+            fetch(
+              `https://api.myquran.com/v2/sholat/jadwal/${id}/${getYearNumber}/${monthZero}`
+            )
+              .then((response) => response.json())
+              .then((data) => {
+                this.jadwalSholat = data.data.jadwal;
+                this.lokasi = data.data.lokasi;
+                this.loadingJadwal = false;
+                console.log(this.lokasi);
+              })
+              .catch((error) => {
+                console.error("Error fetching data:", error);
+                this.loadingJadwal = false;
+              });
+          },
+          filteredCities() {
+            return this.allCity.filter((city) => {
+              return city.lokasi
+                .toLowerCase()
+                .includes(this.search.toLowerCase());
+            });
+          },
+        };
+      }
+    </script>
     <script src="assets/js/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
