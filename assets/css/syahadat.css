@@ -25,7 +25,9 @@ h1 {
   margin: 0;
   font-size: 2rem;
 }
-
+.container{
+  width: 80% 0;
+}
 .quiz-container{
   border-radius: 10px;
   box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
@@ -36,7 +38,7 @@ h1 {
   padding: 4rem;
 }
 h2{
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
   margin: 0;
 }
@@ -77,11 +79,10 @@ input[type="text"] {
   border-radius: 5px; 
   font-size: 1rem;
   font-family: inherit; 
-  /* border-color: black; */
 }
 
 input[type="text"]:focus {
-  outline: none; /* Menghilangkan garis kontur default saat fokus */
-  border-color: rgb(185, 148, 112); /* Mengubah warna garis bingkai saat input dalam keadaan fokus */
+  outline: none; 
+  border-color: rgb(185, 148, 112); 
 }
 
