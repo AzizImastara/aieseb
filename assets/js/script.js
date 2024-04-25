@@ -9,11 +9,11 @@ document.getElementById("logo").addEventListener("click", function () {
 document.addEventListener("DOMContentLoaded", initializeSlider);
 
 function initializeSlider() {
-    slides[slideIndex].classList.add("displaySlide");
-    intervalId = setInterval(nextSlide, 3000);
+  slides[slideIndex].classList.add("displaySlide");
+  intervalId = setInterval(nextSlide, 3000);
 
-    arabSlides[arabSlideIndex].classList.add("displaySlide");
-    arabIntervalId = setInterval(nextArabSlide, 5000);
+  arabSlides[arabSlideIndex].classList.add("displaySlide");
+  arabIntervalId = setInterval(nextArabSlide, 5000);
 }
 
 const slides = document.querySelectorAll(".slides .slide");
@@ -58,13 +58,13 @@ function nextSlide() {
 
 function showArabSlide(index) {
   if (index >= arabSlides.length) {
-      arabSlideIndex = 0;
+    arabSlideIndex = 0;
   } else if (index < 0) {
-      arabSlideIndex = arabSlides.length - 1;
+    arabSlideIndex = arabSlides.length - 1;
   }
 
-  arabSlides.forEach(slide => {
-      slide.classList.remove("displaySlide");
+  arabSlides.forEach((slide) => {
+    slide.classList.remove("displaySlide");
   });
 
   const currentArabSlide = arabSlides[arabSlideIndex];
@@ -75,7 +75,7 @@ function prevArabSlide() {
   clearInterval(arabIntervalId);
   arabSlideIndex--;
   if (arabSlideIndex < 0) {
-      arabSlideIndex = arabSlides.length - 1;
+    arabSlideIndex = arabSlides.length - 1;
   }
   showArabSlide(arabSlideIndex);
 }
@@ -83,7 +83,7 @@ function prevArabSlide() {
 function nextArabSlide() {
   arabSlideIndex++;
   if (arabSlideIndex >= arabSlides.length) {
-      arabSlideIndex = 0;
+    arabSlideIndex = 0;
   }
   showArabSlide(arabSlideIndex);
 }
@@ -118,10 +118,67 @@ var tombol = document.getElementsByClassName("btn");
 
 // Menambahkan event listener untuk setiap elemen
 for (var i = 0; i < tombol.length; i++) {
-  tombol[i].addEventListener("click", function() {
+  tombol[i].addEventListener("click", function () {
     // Mengubah teks tombol saat diklik
     this.innerHTML = "Tombol telah diklik";
     // Mengarahkan pengguna ke halaman HTML lain
     window.location.href = "syahadat.html";
   });
+}
+
+let getYearNumber = new Date().getFullYear().toString();
+let getMonth = new Date().getMonth() + 1;
+let monthZero = getMonth.toString().padStart(2, "0");
+
+function jadwalSholat() {
+  return {
+    allCity: [],
+    jadwalSholat: [],
+    loading: true,
+    loadingJadwal: true,
+    lokasi: "",
+    search: "",
+    selectedCityId: "1638",
+    connect() {
+      fetch("https://api.myquran.com/v2/sholat/kota/semua")
+        .then((response) => response.json())
+        .then((data) => {
+          this.allCity = data.data;
+          this.loading = false;
+
+          const defaultCity = this.allCity.find(
+            (city) => city.id === this.selectedCityId
+          );
+          if (defaultCity) {
+            this.jadwal(defaultCity.id);
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+          this.loading = false;
+        });
+    },
+    jadwal(id) {
+      this.loadingJadwal = true;
+      fetch(
+        `https://api.myquran.com/v2/sholat/jadwal/${id}/${getYearNumber}/${monthZero}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          this.jadwalSholat = data.data.jadwal;
+          this.lokasi = data.data.lokasi;
+          this.loadingJadwal = false;
+          console.log(this.lokasi);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+          this.loadingJadwal = false;
+        });
+    },
+    filteredCities() {
+      return this.allCity.filter((city) => {
+        return city.lokasi.toLowerCase().includes(this.search.toLowerCase());
+      });
+    },
+  };
 }

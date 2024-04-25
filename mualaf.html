@@ -16,33 +16,59 @@
   </head>
 
   <body>
+    <div class="nav-container">
+      <header>
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger" />
+        <div class="logo">
+          <img src="assets/image/aieseb_logo.png" alt="Logo" id="logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="./index.html">Beranda</a></li>
+            <li><a href="./belajar.html">Yuk Belajar!</a></li>
+            <li><a href="./aieseb.html">AIESB</a></li>
+            <li><a href="./mualaf.html">Jadwal Sholat</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
     <div class="mualaf">
       <div class="container-mualaf">
         <div x-data="jadwalSholat()" x-init="connect()">
           <div class="mb-3">
-            <div class="content-option d-flex">
-              <input
-                type="text"
-                class="form-control"
-                x-model="search"
-                placeholder="Cari Kota"
-              />
-              <div class="content-option-list">Pilih Daerah</div>
+            <div class="content-option d-flex justify-content-center">
+              <div class="search-city">
+                <div class="content-option-list text-center">Cari Daerah</div>
+                <input
+                  type="text"
+                  class="form-control"
+                  x-model="search"
+                  placeholder="Cari Kota"
+                />
+              </div>
 
-              <select class="form-select" @change="jadwal($event.target.value)">
-                <option selected>Tekan Untuk Melihat</option>
-                <template x-for="city in filteredCities" :key="city.id">
-                  <option x-text="city.lokasi" :value="city.id"></option>
-                </template>
-              </select>
+              <div class="choose-city">
+                <div class="content-option-list text-center">Pilih Daerah</div>
+                <select
+                  class="form-select"
+                  @change="jadwal($event.target.value)"
+                >
+                  <option selected>Tekan Untuk Melihat</option>
+                  <template x-for="city in filteredCities" :key="city.id">
+                    <option x-text="city.lokasi" :value="city.id"></option>
+                  </template>
+                </select>
+              </div>
             </div>
 
             <div class="mt-4">
               <template x-if="!loadingJadwal">
                 <div>
-                  <div class="lokasi-sholat">
-                    <h2 class="lokasi-sholat-header">JADWAL SHOLAT UNTUK</h2>
-                    <h2 x-text="lokasi"></h2>
+                  <div class="lokasi-sholat text-center mb-3">
+                    <h4 class="lokasi-sholat-header">JADWAL SHOLAT UNTUK</h4>
+                    <h4 x-text="lokasi"></h4>
                   </div>
 
                   <div class="table-responsive">
@@ -82,71 +108,133 @@
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
+    <footer>
+      <div class="container-footer">
+        <div class="footer-headline">
+          <div class="footer-img">
+            <img src="assets/image/aieseb_logo.png" alt="logo" />
+            <h5>AIESB</h5>
+          </div>
+          <p class="footer-desc">
+            Jl. Ketintang No.156, Ketintang, <br />
+            Kec. Gayungan, Surabaya, Jawa Timur 60231
+          </p>
+        </div>
+
+        <div class="form-message">
+          <form action="" method="get">
+            <fieldset>
+              <legend>Quick Message</legend>
+              <table class="footer-table">
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter Your Name"
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <textarea
+                      name="message"
+                      cols="30"
+                      rows="4"
+                      placeholder="Your Message"
+                      required
+                    ></textarea>
+                  </td>
+                </tr>
+              </table>
+            </fieldset>
+          </form>
+
+          <div class="submit-btn">
+            <button type="submit" onclick="sendMessage()">Submit Now</button>
+          </div>
+        </div>
+
+        <!-- Error Toast -->
+        <div
+          id="errorToast"
+          class="toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          style="position: fixed; bottom: 20px; right: 20px; z-index: 9999"
+        >
+          <div class="toast-header-error">
+            <strong class="toast-head">Error</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <p class="toast-body">Please fill in all fields.</p>
+        </div>
+
+        <!-- Success Toast -->
+        <div
+          id="successToast"
+          class="toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          style="position: fixed; bottom: 20px; right: 20px; z-index: 9999"
+        >
+          <div class="toast-header-success">
+            <strong class="toast-head">Success</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <p class="toast-body">Success! Message sent.</p>
+        </div>
+
+        <div class="footer-company">
+          <h3>Company</h3>
+          <ul>
+            <li>
+              <a href="#" class="text-white">Telkom Indonesia</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Universitas University</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Telkom IndiHome</a>
+            </li>
+            <li>
+              <a href="#" class="text-white">Yayasan Pendidikan Telkom</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p class="text-white mb-0">© 2024 AIESB</p>
+      </div>
+    </footer>
+
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
-    <script>
-      let getYearNumber = new Date().getFullYear().toString();
-      let getMonth = new Date().getMonth() + 1;
-      let monthZero = getMonth.toString().padStart(2, "0");
-
-      function jadwalSholat() {
-        return {
-          allCity: [],
-          jadwalSholat: [],
-          loading: true,
-          loadingJadwal: true,
-          lokasi: "",
-          search: "",
-          selectedCityId: "1638",
-          connect() {
-            fetch("https://api.myquran.com/v2/sholat/kota/semua")
-              .then((response) => response.json())
-              .then((data) => {
-                this.allCity = data.data;
-                this.loading = false;
-
-                const defaultCity = this.allCity.find(
-                  (city) => city.id === this.selectedCityId
-                );
-                if (defaultCity) {
-                  this.jadwal(defaultCity.id);
-                }
-              })
-              .catch((error) => {
-                console.error("Error fetching data:", error);
-                this.loading = false;
-              });
-          },
-          jadwal(id) {
-            this.loadingJadwal = true;
-            fetch(
-              `https://api.myquran.com/v2/sholat/jadwal/${id}/${getYearNumber}/${monthZero}`
-            )
-              .then((response) => response.json())
-              .then((data) => {
-                this.jadwalSholat = data.data.jadwal;
-                this.lokasi = data.data.lokasi;
-                this.loadingJadwal = false;
-                console.log(this.lokasi);
-              })
-              .catch((error) => {
-                console.error("Error fetching data:", error);
-                this.loadingJadwal = false;
-              });
-          },
-          filteredCities() {
-            return this.allCity.filter((city) => {
-              return city.lokasi
-                .toLowerCase()
-                .includes(this.search.toLowerCase());
-            });
-          },
-        };
-      }
-    </script>
     <script src="assets/js/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
