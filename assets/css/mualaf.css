@@ -19,7 +19,32 @@ body {
   padding: 24px 0;
 }
 
-.carousel-item img {
-  display: block;
-  margin: 0 auto;
+.search-city,
+.choose-city {
+  margin: 12px;
+}
+
+.search-city input,
+.choose-city select {
+  padding: 12px;
+  width: 380px;
+}
+
+.content-option-list {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.lokasi-sholat h4 {
+  font-style: italic;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .search-city input,
+  .choose-city select {
+    width: 100%;
+  }
 }
