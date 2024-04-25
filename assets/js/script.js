@@ -118,7 +118,6 @@ var tombol = document.getElementsByClassName("btn");
 
 for (var i = 0; i < tombol.length; i++) {
   tombol[i].addEventListener("click", function() {
-  tombol[i].addEventListener("click", function () {
     // Mengubah teks tombol saat diklik
     this.innerHTML = "Tombol telah diklik";
     window.location.href = "syahadat.html";
@@ -128,36 +127,36 @@ for (var i = 0; i < tombol.length; i++) {
 // Punya Quiz
 const quizData = [
   {
-      question: "Rukun Iman ada berapa?",
-      a: "6",
-      b: "1",
-      c: "5",
-      d: "4",
-      correct: "a",
+    question: "Rukun Iman ada berapa?",
+    a: "6",
+    b: "1",
+    c: "5",
+    d: "4",
+    correct: "a",
   },
   {
-      question: "Rukun Islam ada berapa?",
-      a: "10",
-      b: "5",
-      c: "4",
-      d: "2",
-      correct: "b",
+    question: "Rukun Islam ada berapa?",
+    a: "10",
+    b: "5",
+    c: "4",
+    d: "2",
+    correct: "b",
   },
   {
-      question: "shalat shubuh berapa rakaat?",
-      a: "6",
-      b: "4",
-      c: "2",
-      d: "1",
-      correct: "c",
+    question: "shalat shubuh berapa rakaat?",
+    a: "6",
+    b: "4",
+    c: "2",
+    d: "1",
+    correct: "c",
   },
   {
-      question: "rukun islam yang dilaksanakan di bulan ramadhan adalah?",
-      a: "shalat",
-      b: "haji",
-      c: "zakat",
-      d: "puasa",
-      correct: "d",
+    question: "rukun islam yang dilaksanakan di bulan ramadhan adalah?",
+    a: "shalat",
+    b: "haji",
+    c: "zakat",
+    d: "puasa",
+    correct: "d",
   },
 ];
 
@@ -188,9 +187,9 @@ function deselectAnswers() {
 function getSelected() {
   let answer
   answerEls.forEach(answerEl => {
-      if(answerEl.checked) {
-          answer = answerEl.id
-      }
+    if(answerEl.checked) {
+      answer = answerEl.id
+    }
   })
   return answer
 }
@@ -213,7 +212,6 @@ submitBtn.addEventListener('click', () => {
         <h2>Semoga Istiqamah</h2>
         <h2>Pembimbing kamu..</h2>
         <button onclick="window.location.href = 'index.html';">Selesai</button>
-        
       `;
     }
     else if(score<4){
@@ -230,7 +228,6 @@ submitBtn.addEventListener('click', () => {
     alert('Silakan pilih jawaban sebelum melanjutkan.'); 
   }
 });
-
 
 let getYearNumber = new Date().getFullYear().toString();
 let getMonth = new Date().getMonth() + 1;
