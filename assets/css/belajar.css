@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-
- .belajar-container{
-=======
 .belajar-container {
->>>>>>> syahrul
   width: 80% 0;
 }
 
@@ -150,7 +145,6 @@ body {
     url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
       no-repeat;
   background-size: cover;
-  
 }
 .column-video {
   float: left;
@@ -168,11 +162,7 @@ p {
   padding-top: 20px;
   text-align: justify;
 }
-<<<<<<< HEAD
-.column-desc{
-=======
 .column-desc {
->>>>>>> syahrul
   bottom: 200px;
 }
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
