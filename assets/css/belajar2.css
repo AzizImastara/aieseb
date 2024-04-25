@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.belajar2 {
+  background: linear-gradient(
+      rgba(185, 148, 112, 0.5),
+      rgba(185, 148, 112, 0.5)
+    ),
+    url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
+      no-repeat;
+  background-size: cover;
+  /* padding-top: 12px; */
+}
+
+.hero,
+.hero-media {
+  background: linear-gradient(
+      rgba(254, 250, 224, 0.3),
+      rgba(254, 250, 224, 0.3)
+    ),
+    url(https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png)
+      no-repeat;
+  background-size: cover;
+  padding: 24px;
+  margin: 0;
+}
+
+.container-belajar2 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.image-container {
+  position: relative;
+}
+
+.button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button-container button {
+  padding: 30px 70px;
+  background-color: rgb(185, 148, 112);
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.card {
+  margin-bottom: 16px;
+  background: linear-gradient(
+      rgba(185, 148, 112, 0.5),
+      rgba(185, 148, 112, 0.5)
+    ),
+    url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
+      no-repeat;
+  background-size: cover;
+}
+
+.card-img {
+  opacity: 0.5;
+}
+
+.cr a {
+  text-decoration: none;
+  color: #000;
+}
