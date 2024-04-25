@@ -9,28 +9,16 @@ body {
     url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
       no-repeat;
   background-size: cover;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  background: linear-gradient(
-      rgba(185, 148, 112, 0.5),
-      rgba(185, 148, 112, 0.5)
-    ),
-    url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
-      no-repeat;
-  background-size: cover;
-}
 
 * {
   box-sizing: border-box;
 }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
 
 h1 {
   padding: 0;
@@ -38,34 +26,62 @@ h1 {
   font-size: 2rem;
 }
 
-/* HERO */
-.hero-container {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
-    url("images/bg.jpg");
-  height: 70vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.quiz-container{
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  width: 100%;
+  overflow: hidden;
 }
-
-.hero-text {
+.quiz-header{
+  padding: 4rem;
+}
+h2{
+  padding: 1.5rem;
   text-align: center;
-  color: white;
-  padding: 1rem;
-}
-
-.hero-text h1 {
-  /* font-size: 4em; */
-  color: var(--dark-color);
-}
-
-.hero-text p {
-  /* font-size: 2em; */
   margin: 0;
-  color: var(--dark-color);
 }
-/* END OF HERO */
+ul.quiz{
+  list-style-type: none;
+  padding: 0;
+}
+ul.quiz li.quizz{
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+ul.quiz li.quiz label.quiz{
+  cursor: pointer;
+}
+button{
+  background-color: #b99470;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 1.3rem;
+}
+button:hover{
+  background-color: #8c725b;
+}
+button:focus{
+  outline: none;
+  background-color:  #b99470;;
+}
+
+input[type="text"] {
+  width: calc(100% - 2.6rem);
+  padding: 1rem; 
+  margin: 0.5rem; 
+  border: 3px solid #9c2b2b; 
+  border-radius: 5px; 
+  font-size: 1rem;
+  font-family: inherit; 
+  /* border-color: black; */
+}
+
+input[type="text"]:focus {
+  outline: none; /* Menghilangkan garis kontur default saat fokus */
+  border-color: rgb(185, 148, 112); /* Mengubah warna garis bingkai saat input dalam keadaan fokus */
+}
+

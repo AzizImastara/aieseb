@@ -1,8 +1,6 @@
 
- */
  .container-belajar {
-  width: 80%;
-  margin: 0 auto;
+  width: 80% 0;
 }
 
  * {
@@ -96,20 +94,15 @@ body {
   padding-left: 20px;
 }
 
-/* Fake image */
-.fakeimg {
-  /* background-color: #aaa; */
-  width: 100%;
-  padding: 20px;
-}
-#logo{
+
+.logo{
 opacity: 1;
 width: 80px;
   height: 100%;
   cursor: pointer;
 }
 
-img{
+.belajar{
 opacity: 0.5;
 height: 400px;
 width: 100%;
