@@ -1,116 +1,8 @@
-.belajar-container {
-  width: 80% 0;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-}
-
 body {
-  background: linear-gradient(
-      rgba(185, 148, 112, 0.5),
-      rgba(185, 148, 112, 0.5)
-    ),
-    url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
-      no-repeat;
-  background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: linear-gradient(
-      rgba(254, 250, 224, 0.3),
-      rgba(254, 250, 224, 0.3)
-    ),
-    url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
-      no-repeat;
-  background-size: cover;
-}
-
-.header h1 {
-  font-size: 50px;
-}
-
-/* Create two unequal columns that floats next to each other */
-
-.leftcolumn .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: rgb(185, 148, 112);
-  color: black;
-  font-size: 16px;
-  padding: 30px 70px;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.leftcolumn .btn:hover {
-  background-color: black;
-  color: rgb(185, 148, 112);
-}
-
-.rightcolumn .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #f1f1f1;
-  color: black;
-  font-size: 16px;
-  padding: 16px 30px;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.rightcolumn .btn:hover {
-  background-color: black;
-  color: white;
-}
-/* Left column */
-.leftcolumn {
-  float: left;
-  width: 100%;
-  background-image: linear-gradient(rgb(185, 148, 112), rgb(185, 148, 112)),
-    url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
-      no-repeat;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-image: linear-gradient(rgb(185, 148, 112), rgb(185, 148, 112)),
-    url("images/bg.jpg");
-  padding-left: 20px;
-}
-
-.logo {
-  opacity: 1;
-  width: 80px;
-  height: 100%;
-  cursor: pointer;
-}
-
-.belajar {
-  opacity: 0.5;
-  height: 400px;
-  width: 100%;
-  padding: 0;
-}
-/* Add a card effect for articles */
-.card {
+.belajar2 {
   background: linear-gradient(
       rgba(185, 148, 112, 0.5),
       rgba(185, 148, 112, 0.5)
@@ -118,62 +10,68 @@ body {
     url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
       no-repeat;
   background-size: cover;
-  padding: 20px;
-  margin-top: 20px;
+  /* padding-top: 12px; */
 }
 
-/* Clear floats after the columns */
-.row-content::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-.content {
+.hero,
+.hero-media {
   background: linear-gradient(
       rgba(254, 250, 224, 0.3),
       rgba(254, 250, 224, 0.3)
+    ),
+    url(https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png)
+      no-repeat;
+  background-size: cover;
+  padding: 24px;
+  margin: 0;
+}
+
+.container-belajar2 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.image-container {
+  position: relative;
+}
+
+.button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button-container button:hover {
+  background-color: #000;
+  color: rgb(185, 148, 112);
+}
+
+.button-container button {
+  padding: 30px 70px;
+  background-color: rgb(185, 148, 112);
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.card {
+  margin-bottom: 16px;
+  background: linear-gradient(
+      rgba(185, 148, 112, 0.5),
+      rgba(185, 148, 112, 0.5)
     ),
     url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
       no-repeat;
   background-size: cover;
 }
-.column-video {
-  float: left;
-  width: 33.33%;
-  padding: 40px;
+
+.card-img {
+  opacity: 0.5;
 }
 
-.row-video::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-p {
-  padding-top: 20px;
-  text-align: justify;
-}
-.column-desc {
-  bottom: 200px;
-}
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn,
-  .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
-  .column-video {
-    width: 100%;
-    justify-content: center;
-  }
+.cr a {
+  text-decoration: none;
+  color: #000;
 }
