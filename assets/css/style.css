@@ -10,7 +10,6 @@ body {
     url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
       no-repeat;
   background-size: cover;
-  
 }
 
 h1 {
@@ -19,21 +18,21 @@ h1 {
 
 h2 {
   font-size: 35px;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   line-height: 1.5;
   margin-bottom: 10px;
 }
 
 /* start slider */
 
-.slider{
+.slider {
   position: relative;
   width: 100%;
   margin: auto;
   overflow: hidden;
 }
 
-.sliderArab{
+.sliderArab {
   position: relative;
   width: 100%;
   margin: auto;
@@ -44,7 +43,7 @@ h2 {
   background-color: #5f6f52;
 }
 
-.slider img{
+.slider img {
   width: 100%;
   max-height: 800px;
   display: none;
@@ -56,13 +55,14 @@ h2 {
   margin: 30px;
   padding: 20px;
   display: none;
-  background-color: #FEFAE0;
+  background-color: #fefae0;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
 }
 
-.sliderArab div.slidesArab {
-  text-align: center ;
+.slidesArab {
+  text-align: center;
+  display: flex;
   width: 80%;
 }
 
@@ -73,7 +73,7 @@ img.displaySlide,
   animation-duration: 1.5s;
 }
 
-.slider button{
+.slider button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -85,7 +85,7 @@ img.displaySlide,
   cursor: pointer;
 }
 
-.sliderArab button{
+.sliderArab button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -97,23 +97,27 @@ img.displaySlide,
   cursor: pointer;
 }
 
-.prev{
+.prev {
   left: 0;
 }
 
-.next{
+.next {
   right: 0;
 }
 
 @keyframes fade {
-  from {opacity: .5}
-  to {opacity: 1}
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .arab {
   direction: rtl;
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 35px;
   line-height: 1.5;
   margin-bottom: 10px;
@@ -123,7 +127,12 @@ img.displaySlide,
 
 /* SHOWCASE */
 .showcase-container:nth-child(even) {
-  background: linear-gradient(rgba(254, 250, 224, 0.5), rgba(254, 250, 224, 0.5)), url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png") no-repeat;
+  background: linear-gradient(
+      rgba(254, 250, 224, 0.5),
+      rgba(254, 250, 224, 0.5)
+    ),
+    url("https://www.toptal.com/designers/subtlepatterns/uploads/geometric-leaves.png")
+      no-repeat;
   background-size: cover;
 }
 
@@ -131,8 +140,8 @@ img.displaySlide,
   display: block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #5F6F52;
-  color: #FEFAE0;
+  background-color: #5f6f52;
+  color: #fefae0;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -149,16 +158,17 @@ img.displaySlide,
   justify-content: space-between;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 2em ;
+  padding: 2em;
 }
 
-.showcase-image, .showcase-text{
+.showcase-image,
+.showcase-text {
   width: 100%;
   margin: 1em;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.showcase-text a{
+.showcase-text a {
   text-decoration: none;
 }
 
@@ -167,26 +177,26 @@ img.displaySlide,
   text-align: justify;
 }
 
-.showcase-image img{
+.showcase-image img {
   width: 100%;
-  border: 2px solid #5F6F52;
+  border: 2px solid #5f6f52;
   padding: 0.3rem;
 }
 
 /* End Showcase */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .showcase {
     flex-direction: column;
-    padding: 1em 2em ;
+    padding: 1em 2em;
   }
 
-  .showcase-image, .showcase-text{
+  .showcase-image,
+  .showcase-text {
     width: auto;
   }
 
   .showcase-image {
-    order: -1
+    order: -1;
   }
 }
-  
