@@ -47,4 +47,9 @@ body {
   .choose-city select {
     width: 100%;
   }
+
+  .content-option {
+    display: flex;
+    flex-direction: column;
+  }
 }
